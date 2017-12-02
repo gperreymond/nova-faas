@@ -4,7 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/gperreymond/nova-faas/badge)](https://www.codefactor.io/repository/github/gperreymond/nova-faas)
 [![Coverage Status](https://coveralls.io/repos/github/gperreymond/nova-faas/badge.svg?branch=master)](https://coveralls.io/github/gperreymond/nova-faas?branch=master)
 
-nova-faas is a node.js framework that helps you to implement microservices and scalability for cqrs architectures over rabbitmq service discovery.
+nova-faas is a node.js framework that helps you to implement microservices and scalability over rabbitmq service discovery.
 
 ## Advantages
 
@@ -14,7 +14,7 @@ nova-faas is a node.js framework that helps you to implement microservices and s
 * Only one monolithic project to maintain.
 * Start only the services you want with configuration file.
 * Agnostics commands and queries, they just had to be promises.
-* Tests are dissociate from the notion of CQRS.
+* Tests are isolate, because of the structure.
 * Deploy and scale your microservices like you want.
 * Automatic services discovery! Thanks rabbitmq.
 
@@ -74,7 +74,7 @@ server.on('ready', () => {
 
 #### Service
 
-A __service__ is the base element of the CQRS, it's like a microservice or a task. The application result of a __service__ will automaticaly:
+A __service__ is the base element of the system, it's like a microservice or a task. The application result of a __service__ will automaticaly:
 
 - Send an event on the bus in case of success
 - Send an event on the bus in case of error
@@ -109,7 +109,7 @@ module.exports = handler
 
 #### Query
 
-From the framework point of view a __query__ is the same as a __command__, but because of __queries__ roles in the CQRS architecture, this time data will be return.
+From the library point of view a __query__ is the same as a __command__, but because of __queries__ roles in the architecture, this time data will be return.
 
 * "A result" is either data, or an exception
 * Because it extends __Service__, success event or error event will be automaticaly send on the bus
@@ -154,16 +154,16 @@ It's time to learn how to link all those services and events together, let's me 
 
 ###### Definitions
 
-A client could be wherever you need it to be, even on another server, or behind a hapiJS/Express server, or why not in another __CQRS Server__.  
+A client could be wherever you need it to be, even on another server, or behind a hapiJS/Express server, or why not in another __Server__.  
 You will have three patterns to use the __server__ events bus.
 
 ###### Sender/Receiver pattern
 
-The Send / Receive object pair uses a direct exchange inside of RabbitMQ
+The Send / Receive object pair uses a direct exchange (1:1) inside of RabbitMQ
 
 ###### Publisher/Subscriber pattern
 
-The Publish / Subscribe object pair uses a fanout exchange inside of RabbitMQ, allowing you to have as many subscribers as you need. Think of pub/sub as an event that gets broadcast to anyone that cares, or no one at all if no one is listening.
+The Publish / Subscribe object pair uses a fanout exchange (1:N) inside of RabbitMQ, allowing you to have as many subscribers as you need. Think of pub/sub as an event that gets broadcast to anyone that cares, or no one at all if no one is listening.
 
 ###### Request/Response pattern
 
