@@ -1,5 +1,3 @@
-'use strict'
-
 const standard = require('mocha-standard')
 
 describe('code style', function () {

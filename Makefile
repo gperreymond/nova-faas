@@ -8,7 +8,6 @@ down:
 
 test:
 	rm -rf coverage;
-	npm run test:standard;
 	npm run test:coverage;
 
 coverage-publish:
