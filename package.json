@@ -1,10 +1,9 @@
 {
   "name": "nova-faas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "FAAS (functions as a service) in nodeJS with promises.",
   "main": "index.js",
   "scripts": {
-    "test": "./npm-scripts/test.sh",
     "test:standard": "node_modules/.bin/standard --verbose | snazzy",
     "test:coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text ./node_modules/.bin/mocha --opts .mocharc",
     "coverage:publish": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
@@ -29,6 +28,7 @@
     "eraro": "0.4.1",
     "glob-promise": "3.3.0",
     "hoek": "5.0.2",
+    "joi": "13.0.2",
     "lodash": "4.17.4",
     "servicebus": "2.0.10",
     "uuid": "3.1.0"
@@ -37,12 +37,10 @@
     "chai": "4.1.2",
     "chance": "1.0.12",
     "coveralls": "3.0.0",
-    "joi": "13.0.2",
     "mocha": "4.0.1",
     "mocha-standard": "1.0.0",
     "nyc": "11.3.0",
     "rewire": "3.0.2",
-    "shortid": "2.2.8",
     "sinon": "4.1.2",
     "snazzy": "7.0.0",
     "standard": "10.0.3"
