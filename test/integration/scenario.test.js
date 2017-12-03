@@ -4,6 +4,22 @@ const Server = require('../..').Server
 const Client = require('../..').Client
 
 describe('[integration] the client', () => {
+  it('should fail to start because server port not good', done => {
+    const server = new Server()
+    server.start({user: 'guest', pass: 'guest', port: 6060})
+    server.on('error', error => {
+      expect(error.eraro).to.equal(true)
+      done()
+    })
+  })
+  it('should fail to start because client port not good', done => {
+    const client = new Client()
+    client.start({user: 'guest', pass: 'guest', port: 6060})
+    client.on('error', error => {
+      expect(error.eraro).to.equal(true)
+      done()
+    })
+  })
   it('should subscibe to a fail send command', done => {
     const server = new Server()
     server
