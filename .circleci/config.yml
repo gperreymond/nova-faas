@@ -34,4 +34,4 @@ jobs:
 
       # run tests!
       - run: ./tasks/test.sh
-      - run: /tasks/coverage-publish.sh
+      - run: ./tasks/coverage-publish.sh
