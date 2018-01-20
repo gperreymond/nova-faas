@@ -11,7 +11,7 @@ jobs:
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      - image: rabbitmq:3.6-management-alpine
+      - image: rabbitmq:3.7-management-alpine
 
     working_directory: ~/repo
 
@@ -25,7 +25,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run: yarn install
 
       - save_cache:
           paths:
@@ -33,5 +33,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: make test
-      - run: make coverage-publish
+      - run: ./tasks/test.sh
+      - run: /tasks/coverage-publish.sh
