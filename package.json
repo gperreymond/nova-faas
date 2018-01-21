@@ -1,6 +1,6 @@
 {
   "name": "nova-faas",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "FAAS (functions as a service) in nodeJS with promises.",
   "main": "index.js",
   "scripts": {
