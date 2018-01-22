@@ -1,12 +1,18 @@
 {
   "name": "nova-faas",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "FAAS (functions as a service) in nodeJS with promises.",
   "main": "index.js",
   "scripts": {
+    "precommit": "standard",
     "test:standard": "node_modules/.bin/standard --verbose | snazzy",
     "test:coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text ./node_modules/.bin/mocha --opts .mocharc",
-    "coverage:publish": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coverage:publish": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "standard": "standard",
+    "standard:fix": "standard --fix",
+    "release:patch": "release patch",
+    "release:minor": "release minor",
+    "release:major": "release major"
   },
   "repository": {
     "type": "git",
@@ -28,20 +34,21 @@
     "eraro": "0.4.1",
     "glob-promise": "3.3.0",
     "hoek": "5.0.2",
-    "joi": "13.0.2",
+    "joi": "13.1.1",
     "lodash": "4.17.4",
     "servicebus": "2.0.10",
-    "uuid": "3.1.0"
+    "uuid": "3.2.1"
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "chance": "1.0.12",
+    "chance": "1.0.13",
     "coveralls": "3.0.0",
-    "mocha": "4.0.1",
+    "mocha": "5.0.0",
     "mocha-standard": "1.0.0",
-    "nyc": "11.3.0",
+    "nyc": "11.4.1",
+    "release": "3.1.5",
     "rewire": "3.0.2",
-    "sinon": "4.1.2",
+    "sinon": "4.2.0",
     "snazzy": "7.0.0",
     "standard": "10.0.3"
   },
