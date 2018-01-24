@@ -1,7 +1,11 @@
+const path = require('path')
 const Server = require('../../..').Server
 const server = new Server()
 
-server.start()
+server
+  .use(path.resolve(__dirname, '../../../test/data/commands/*.js'))
+  .use(path.resolve(__dirname, '../../../test/data/queries/*.js'))
+  .start()
 
 server.on('error', error => {
   console.log('server error')
