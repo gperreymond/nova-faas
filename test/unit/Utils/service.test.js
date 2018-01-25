@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 
-const Service = require('../../../lib/Utils/Service')
+const Service = require('../../../lib/utils/Service')
 
 describe('[unit] class Service', () => {
   it('should initialize', async () => {
