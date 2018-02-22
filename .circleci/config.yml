@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:8
+      - image: rabbitmq:3-management-alpine
 
     working_directory: ~/repo
 
