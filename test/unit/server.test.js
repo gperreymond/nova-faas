@@ -13,9 +13,9 @@ describe('[unit] the server', () => {
     server.on('error', error => {
       expect(error.eraro).to.equal(true)
       expect(error.code).to.equal('internal_error')
-      expect(error['cqrs-framework']).to.equal(true)
-      expect(error.package).to.equal('cqrs-framework')
-      expect(error.msg).to.equal('cqrs-framework: internal_error')
+      expect(error['nova-faas']).to.equal(true)
+      expect(error.package).to.equal('nova-faas')
+      expect(error.msg).to.equal('nova-faas: internal_error')
       done()
     })
   })

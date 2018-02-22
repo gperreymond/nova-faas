@@ -145,7 +145,7 @@ $ node examples/server.js
 But, you can run the server in debug mode.
 
 ```
-$ DEBUG=cqrs:* node examples/server.js
+$ DEBUG=nova:* node examples/server.js
 ```
 
 #### Client
@@ -228,7 +228,7 @@ $ node examples/client-sender.js
 But, you can run the client in debug mode.
 
 ```
-$ DEBUG=cqrs:* node examples/client-sender.js
+$ DEBUG=nova:* node examples/client-sender.js
 ```
 
 Result will be:
