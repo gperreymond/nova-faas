@@ -1,6 +1,6 @@
 {
   "name": "nova-faas",
-  "version": "1.0.17",
+  "version": "1.1.0",
   "description": "FAAS (functions as a service) in nodeJS with promises.",
   "main": "index.js",
   "scripts": {
@@ -48,7 +48,7 @@
     "nyc": "11.4.1",
     "release": "3.1.6",
     "rewire": "3.0.2",
-    "sinon": "4.3.0",
+    "sinon": "4.4.1",
     "snazzy": "7.0.0",
     "standard": "11.0.0"
   },
