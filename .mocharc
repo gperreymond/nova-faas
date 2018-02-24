@@ -1,4 +1,2 @@
 --timeout 5000
-test/standard.test.js
 --recursive test/unit
---recursive test/integration
