@@ -6,17 +6,20 @@
 
 nova-faas is a node.js framework that helps you to implement microservices and scalability over rabbitmq service discovery.
 
+* Read __CHANGELOG.md__
+* Read __PLUGINS.md__
+
 ## Advantages
 
 * Think better! Think KISS!
-* Configuration-driven oriented framework.
-* Only one monolithic project in your github.
-* Only one monolithic project to maintain.
-* Start only the services you want with configuration file.
-* Agnostics commands and queries, they just had to be promises.
-* Tests are isolate, because of the structure.
-* Deploy and scale your microservices like you want.
-* Automatic services discovery! Thanks rabbitmq.
+* Configuration-driven oriented framework
+* Only one monolithic project in your github
+* Only one monolithic project to maintain
+* Start only the services you want with configuration file
+* Agnostics commands and queries, they just had to be promises
+* Tests are isolate, because of the structure
+* Deploy and scale your microservices like you want
+* Automatic services discovery! Thanks rabbitmq
 
 ## Installation  
 

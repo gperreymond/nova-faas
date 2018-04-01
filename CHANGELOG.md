@@ -1,3 +1,9 @@
+# changelog
+
+### Version 1.1.1
+
+#### Remove devDependencies release package
+
 ### Version 1.1.0
 
 #### Native promises
