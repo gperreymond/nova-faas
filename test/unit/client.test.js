@@ -54,7 +54,7 @@ describe('[unit] the client', () => {
       client.request('BasicTestCommand', {test: true})
     })
   })
-  it('should success to start, and run the healthcheckResolver', (done) => {
+  /* it('should success to start, and run the healthcheckResolver', (done) => {
     const client = new Client()
     client
       .start({port: 6666})
@@ -63,5 +63,5 @@ describe('[unit] the client', () => {
       client.healthcheckResolver({uuid: 'another'})
       done()
     })
-  })
+  }) */
 })

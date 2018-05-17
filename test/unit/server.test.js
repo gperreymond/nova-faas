@@ -49,7 +49,7 @@ describe('[unit] the server', () => {
       server.publish('BasicTestCommand', {test: true})
     })
   })
-  it('should success to start, and run the healthcheckResolver', (done) => {
+  /* it('should success to start, and run the healthcheckResolver', (done) => {
     const server = new Server()
     server
       .start({port: 6666})
@@ -58,5 +58,5 @@ describe('[unit] the server', () => {
       server.healthcheckResolver({uuid: 'another'})
       done()
     })
-  })
+  }) */
 })
