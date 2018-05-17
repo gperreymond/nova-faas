@@ -4,7 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/gperreymond/nova-faas/badge)](https://www.codefactor.io/repository/github/gperreymond/nova-faas)
 [![Coverage Status](https://coveralls.io/repos/github/gperreymond/nova-faas/badge.svg?branch=master)](https://coveralls.io/github/gperreymond/nova-faas?branch=master)
 
-nova-faas is a node.js framework that helps you to implement microservices and scalability over rabbitmq service discovery.
+nova-faas is a node.js library that helps you to implement microservices and scalability over rabbitmq service discovery.
 
 * Read __CHANGELOG.md__
 * Read __PLUGINS.md__
@@ -99,8 +99,6 @@ __Step 2__
 You need to __module.exports__ a promise.  
 
 ```javascript
-const Promise = require('bluebird')
-
 const handler = function () {
   return new Promise((resolve, reject) => {
     resolve()
@@ -127,8 +125,6 @@ __Step 2__
 You need to __module.exports__ a promise.  
 
 ```javascript
-const Promise = require('bluebird')
-
 const handler = function () {
   return new Promise((resolve, reject) => {
     resolve({data: true})
