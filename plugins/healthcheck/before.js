@@ -1,4 +1,4 @@
-const register = (context, options) => {
+const register = (context, options = {}) => {
   return new Promise((resolve, reject) => {
     try {
       context.app.healthcheck = () => {
